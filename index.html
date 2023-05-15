@@ -23,7 +23,9 @@
     <title>Aummu</title>
 </head>
 <body>
-    
+
+<div class="fix-background">
+
     <header>
 
         <div class="nav-left">
@@ -32,8 +34,9 @@
 
             <nav class="nav-link">
 
-                <a href="#">Recommend website</a>
-                <a href="#">Review</a>
+                <a href="index.html">Home</a>
+                <a href="#recommend">Recommend website</a>
+                <a href="review.html">Review</a>
 
             </nav>
 
@@ -83,7 +86,7 @@
             <div class="search-form">
 
                 <form action="">
-                    <input id="search-box" class="search-box" type="search" placeholder="Search here">
+                    <input id="search-box" class="search-box" type="text" placeholder="Search here">
                     <label for="search-box"><i class="fa-solid fa-magnifying-glass"></i></label>
                 </form>
     
@@ -100,63 +103,51 @@
 
         <div class="type-of-container">
 
-            <p>Type of painting on the website</p>
+            <p data-aos="fade-up">Type of painting on the website</p>
 
-            <hr style="border: 1px solid black;">
+            <hr data-aos="fade-up" style="border: 1px solid black;">
 
             <div class="product-con">
                 
                 <!-- item 1 -->
-                <div class="product-item">
+                <div data-aos="fade-right" class="product-item">
                     <a href="color.html"><img src="src/images/color-images/color-img-2.png" alt=""></a>
-                    <button class="img-btn" style="
-                        bottom: 1rem;
-                        left: 1rem;
-                    ">Color</button>
+                    <button class="img-btn img-btn-1">Color</button>
                 </div>
                 <!-- item 2 -->
-                <div class="product-item" style="margin: auto 0;"> <!-- margin auto จัดให้มันอยู่ตรงกลางให้เ -->
+                <div data-aos="fade-left" class="product-item" style="margin: auto 0;"> <!-- margin auto จัดให้มันอยู่ตรงกลางให้เ -->
                     <a href="black-white.html"><img src="src/images/bw-images/bw-img-2.png" alt=""></a>
-                    <button class="img-btn" style="
-                        bottom: 1rem;
-                        left: 1rem;
-                    ">Black & White</button>
+                    <button class="img-btn img-btn-2">Black & White</button>
                 </div>
                 <!-- item 3 -->
-                <div class="product-item">
+                <div data-aos="fade-right" class="product-item">
                     <a href="water-color.html"><img src="src/images/wc-images/wc-img-2.png" alt=""></a>
-                    <button class="img-btn" style="
-                        bottom: 1rem;
-                        left: 1rem;
-                    ">Watercolor</button>
+                    <button class="img-btn img-btn-3">Watercolor</button>
                 </div>
                 <!-- item 4 -->
-                <div class="product-item" style="margin: auto 0;">
+                <div data-aos="fade-left" class="product-item" style="margin: auto 0;">
                     <a href="striker.html"><img src="src/images/striker-images/stiker-img-1.png"alt=""></a>
-                    <button class="img-btn" style="
-                        bottom: 1rem;
-                        left: 1rem;
-                    ">Striker</button>
+                    <button class="img-btn img-btn-4">Striker</button>
                 </div>
+
+                <!-- for hiper link #recommend -->
+                <div id="recommend"></div>
                 
             </div>
-
         </div>
-
     </section>
-
     <section class="recommend-website">
 
         <div class="recommend-container">
 
-            <p data-aos="zoom-in-up">Recommend Website</p>
+            <p data-aos="fade-up">Recommend Website</p>
 
-            <hr style="border: 1px solid black;">
+            <hr data-aos="fade-up" style="border: 1px solid black;">
 
             <div class="re-container">
 
                 <!-- re-item 1 -->
-                <div class="re-item">
+                <div data-aos="zoom-in-up" class="re-item">
 
                     <h2>About</h2>
                     <p>Aummu is a website that collects various paintings on a trading website. For those who want to sell pictures and those who like to collect paintings.</p>
@@ -164,7 +155,7 @@
                 </div>
 
                 <!-- re-item 2 -->
-                <div class="re-item">
+                <div data-aos="zoom-in-up" class="re-item">
 
                     <h2>Types of painting </h2>
                     <p>There are many types of paintings on the website, such as color images, black and white images, background images.</p>
@@ -172,7 +163,7 @@
                 </div>
 
                 <!-- re-item 3 -->
-                <div class="re-item">
+                <div data-aos="zoom-in-up" class="re-item">
 
                     <h2>Reviews</h2>
                     <p>You can review artists you like as feedback for future development.</p>
@@ -226,8 +217,11 @@
             </div>
     
         </div>
+
     
     </footer>
+
+</div>
 
     <script src="src/js/script.js"></script>
     
@@ -237,6 +231,9 @@
         AOS.init();
     </script>
 
+    <!-- stcick header -->
+    <script src="src/js/sticky-header.js"></script>
+    
 </body>
 </html>
 

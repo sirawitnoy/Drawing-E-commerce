@@ -1,3 +1,4 @@
+//กดรูปแล้วใหญ่ขึ้น
 $(".product-con img").click(function () {
     var src = $(this).attr("src");
     var size = $(this).attr("class");

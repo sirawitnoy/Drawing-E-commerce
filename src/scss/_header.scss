@@ -2,14 +2,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 2rem; 
     top: 0;
     left: 0;
     right: 0;
     height: 5rem;
-    background: rgba(255, 255, 255, 0.5);
+    // background: rgba(255, 255, 255, 0.5);
     position: fixed;
     z-index: 100;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.5);
+
+
+    &.sticky {
+        background: #ECECEe; //แถบสีบนheader
+    }
 
     .nav-left {
         display: flex;
@@ -24,19 +31,33 @@ header {
             width: 12rem;
         }
     }
-
     
     
     .nav-link {
+        @media (max-width: 850px) {
+            display: none;
+        }
+
         a {
             text-decoration: none;
             color: black;
             font-size: 1.2em;
+            transition: .3s ease;
+            padding: .5rem;
+            border-radius: 2rem;
+
+            &:hover {
+                color: black;
+                background: #7B7B7B;
+                
+                
+            }
         }
 
         a:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 2rem;
         }
+
     }
 
     .icons-link {
