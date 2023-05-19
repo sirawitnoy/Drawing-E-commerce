@@ -13,6 +13,45 @@ footer {
             align-items: center;
             padding: 2rem 6rem;
             background: #ECECEC;
+
+            @media (max-width: 850px) {
+                display: none;
+            }
+
+            @media (max-width: 426px) {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               margin-top: 4rem;
+
+               .learn-more {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                @media (max-width: 426px) {
+                    font-size: 1rem;
+                    justify-content: none;
+                }
+               }
+
+               .support-center {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: 376px) {
+                font-size: 1rem;
+                }
+               }
+            }
+
+            @media (max-width: 321px) {
+                padding: 2rem 2rem;
+            }
             
             // for p in learn-more and support-center
             p:not(last-child) {
@@ -26,7 +65,55 @@ footer {
                 color: black;
                 margin-right: 2rem;
                 width: 15rem;
+
+                @media (max-width: 426px) {
+                    margin: 0;
+                }
+
+                
             } 
+        }
+
+        .footer-mobile {
+            flex-direction: column;
+            padding: 2rem 6rem;
+            background: #ECECEC;
+            display: none;
+
+            @media (max-width: 850px) {
+                display: flex;
+            }
+
+
+            @media (max-width: 426px) {
+                display: none;
+            }
+
+            p:not(last-child) {
+                margin-top: 1rem;
+            }
+
+            > div:first-child {
+                display: flex;
+                align-items: center; 
+                justify-content: center;  
+            
+                .logo {
+                    font-size: 2em;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: black;
+                    margin-right: 2rem;
+                    width: 15rem;
+                    margin: 0 auto;
+                } 
+    
+            }
+            
+            > div:last-child {
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
         .footer-lower {
@@ -36,18 +123,40 @@ footer {
             background: #DADADA;
             padding: 2rem 6rem;
             
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            @media (max-width: 426px) {
+                padding: 1rem 4rem;
+            }
+
             .footer-logos {
+
+                @media (max-width: 768px) {
+                    margin-bottom: 1rem;
+                }
 
                 a {
                     font-size: 2.2rem;
                     color: black;   
+
+                    @media (max-width: 321px) {
+                        font-size: 2rem;
+                    }
                 }
 
                 a:not(:last-child) {
                     margin-right: 1rem;
+
                 }
             }
 
+            .copy-right {
+                @media (max-width: 321px) {
+                    text-align: center;
+                }
+            }
         }
     }
 }

@@ -53,6 +53,11 @@
             font-size: calc(4vw + 2px);
             margin-top: 4rem;
             text-shadow: 2px 2px #ECECEC;
+
+            @media (max-width: 426px) {
+                font-size: calc(8vw + 2px);
+                margin-left: 2rem;
+            }
         }
     
         h3 {
@@ -60,6 +65,12 @@
             font-size: calc(3vw + 2px);
             margin-top: 7rem;
             text-shadow: 2px 2px #ECECEC;
+
+            @media (max-width: 426px) {
+                font-size: calc(7vw + 5px);
+                margin-top: 3rem;
+                margin-left: 2rem;
+            }
         }
     }
 }
@@ -72,7 +83,9 @@
         margin-bottom: 4rem;
         position: relative;
         
-
+        @media (max-width: 426px) {
+            margin-bottom: 0;
+        }
         // for background-img 
         // .background-img {
         //     position: absolute;
@@ -96,8 +109,31 @@
             margin-bottom: 40px;
             font-size: calc(5vw + 2px);
             z-index: 2;
+
+            @media (max-width: 769px) {
+                margin-top: 120px;
+            }
+
+            @media (max-width: 426px) {
+                font-size: calc(6vw + 2px);
+                margin-top: 6rem;
+                margin-left: 15%;
+            }
+
+            @media (max-width: 321px) {
+                font-size: calc(6vw + 2px);
+                margin-top: 6rem;
+                margin-left: 15%;
+            }
         }
-        
+
+        // for p-reviews 
+        .p-reviews {
+            @media (max-width: 426px) {
+                margin-left: 42%;
+            }
+        }
+
         hr{
             margin: 0 auto;
             width: 40%;
@@ -108,6 +144,7 @@
         .product-con {
             display: grid;
             grid-template-columns: repeat(2, minmax(180px, 1fr)); //สร้างกรอบขึ้นมมาที่ความกว้างเท่าๆกันโดยความสูงขึ้นอยู่กับขนาดรูป
+            // grid-template-columns: 1fr 1fr;
             gap: 7rem; //ห่างทุกด้าน
             margin: 0 auto;  
             justify-content: center;
@@ -117,13 +154,34 @@
                 gap: 4rem;
             }
 
+            @media (max-width: 850px) {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
             .product-item {
                 width: calc(30vw - 1rem);
+                // width: fit-content;
                 position: relative;
                 background-color: rgba(255, 255, 255, 0.5);
                 padding-bottom: 1rem;
                 padding-top: 1rem;
                 padding-left: 4rem;
+
+                @media (max-width: 850px) {
+                    width: calc(50vw - 1rem);
+                }
+
+                @media (max-width: 426px) {
+                    width: calc(78vw - 1rem);
+                }
+
+                @media (max-width: 376px) {
+                    width: calc(85vw - 1rem);
+                }
+
+                @media (max-width: 321px) {
+                    width: calc(98vw - 1rem);
+                }
 
                 img {
                     width: 80%;
@@ -142,6 +200,14 @@
 
                     @media (max-width: 850px) {
                         font-size: calc(1.3vw + 2px);
+                    }
+
+                    @media (max-width: 426px) {
+                        font-size: calc(3vw + 2px);
+                    }
+
+                    @media (max-width: 321px) {
+                        font-size: calc(4vw + 2px);
                     }
                 }
 
@@ -177,6 +243,18 @@
                 width: calc(30vw - 1rem);
                 position: relative;
                 background-color: rgba(255, 255, 255, 0.5);
+
+                @media (max-width: 850px) {
+                    width: calc(50vw - 1rem);
+                }
+
+                @media (max-width: 426px) {
+                    width: calc(78vw - 1rem);
+                }
+
+                @media (max-width: 321px) {
+                    width: calc(98vw - 1rem);
+                }
 
                 img {
                     width: 80%;
@@ -216,13 +294,24 @@
                 align-items: center;
                 padding: 0 7rem;
                 font-size: 2.5rem;
-                padding-bottom: 1rem;
                 padding-top: 2rem;
                 padding-bottom: 2rem;               
                 background-color: rgba(255, 255, 255, 0.5);
                 margin-left: 2rem;
                 margin-right: 2rem;
-                
+
+                @media (max-width: 769px) {
+                    font-size: 2rem;
+                }
+
+                @media (max-width: 426px) {
+                    padding: 2rem 0;
+                    justify-content: center;
+
+                    > p {
+                        display: none;
+                    }
+                }
             }
 
             .review-items-con {
@@ -232,11 +321,20 @@
                 margin-left: 2rem;
                 margin-right: 2rem;
 
+                @media (max-width: 321px) {
+                    padding: 0;
+                    padding-bottom: 2rem;
+                }
+
                 .review-item {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 1rem;
+
+                    @media (max-width: 426px) {
+                        flex-direction: column;
+                    }
 
                     .detail-item {
                         display: flex;
@@ -245,10 +343,18 @@
                         p {
                             font-size: 2rem;
                             margin-right: 1rem;
+
+                            @media (max-width: 769px) {
+                                font-size: 1.5rem;
+                            }
                         }
 
                         img {
                             width: 20rem;
+
+                            @media (max-width: 769px) {
+                                width: 13rem;
+                            }
                         }
 
                         div:last-child {
@@ -256,6 +362,14 @@
 
                             .detail-star {
                                 font-size: 2rem;
+
+                                @media (max-width: 769px) {
+                                    font-size: 1rem;;
+                                }
+
+                                @media (max-width: 426px) {
+                                    margin-bottom: 1rem;
+                                }
                             }
                         }
                     }
@@ -264,6 +378,15 @@
                     > img {
                         width: 15rem;
                         margin-right: 1.2rem;
+
+                        @media (max-width: 769px) {
+                            width: 10rem;
+                        }
+                        
+                        @media (max-width: 426px) {
+                            margin: 0;
+                            margin: 0 auto;
+                        }
                     }
                 }
                 
@@ -286,6 +409,11 @@
             margin-top: 60px;
             margin-bottom: 40px;
             font-size: calc(5vw + 2px);
+
+            @media (max-width: 426px) {
+                font-size: calc(6vw + 2px);
+                margin-top: 20px;
+            }
         }
         
         hr{
@@ -316,6 +444,18 @@
 
             @media (max-width: 1120px) { //ถ้าขนาดหน้าจอต่ำกว่า1120 จะในคำสั่งในนี้
                 width: 40rem;
+            }
+
+            @media (max-width: 426px) {
+                width: 24rem;
+            }
+
+            @media (max-width: 376px) {
+                width: 21rem;
+            }
+
+            @media (max-width: 321px) {
+                width: 18rem;
             }
 
             &:hover {

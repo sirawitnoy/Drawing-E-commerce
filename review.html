@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,7 +12,7 @@
 
     <!-- link font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -25,6 +25,25 @@
     
     <div class="fix-background">
         <header>
+
+            <div class="menu-btn" id="menu-btn">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+    
+            <!-- for nav-link mobile -->
+            <div class="nav-mobile">
+                <a href="index.html">Home</a>
+                <a href="#recommend">Recommend website</a>
+                <a href="review.html">Review</a>
+
+                <div class="icons-link">
+
+                    <a href="#" onclick="openpop()"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        
+                </div>
+            </div>
 
             <div class="nav-left">
     
@@ -101,7 +120,7 @@
     
             <div class="type-of-container">
     
-                <p data-aos="fade-up">Reviews</p>
+                <p data-aos="fade-up" class="p-reviews">Reviews</p>
     
                 <hr data-aos="fade-up" style="border: 1px solid black;">
     
@@ -235,6 +254,31 @@
                         <p>Privacy policy</p>
                     </div>
     
+                </div>
+
+                <!-- for mobile -->
+                <div class="footer-mobile">
+
+                    <div>
+                        <a href="#"><img class="logo" src="src/images/logo.png" alt=""></a>
+                    </div>
+
+                    <div>
+                        <div class="learn-more">
+                            <h2>Learn More</h2>
+                            <p>Aummu promo code</p>
+                            <p>Stock photos</p>
+                            <p>Legal / Privacy</p>
+                        </div>
+        
+                        <div class="support-center">
+                            <h2>Support Center</h2>
+                            <p>About us</p>
+                            <p>Contact us</p>
+                            <p>Privacy policy</p>
+                        </div>
+                    </div>
+
                 </div>
                 
                 <div class="footer-lower">
